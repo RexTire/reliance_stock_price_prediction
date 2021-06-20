@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 style.use('ggplot')
 
-df = pd.read_csv(r'reliance.csv', header=0, index_col='Date', parse_dates=True) #reading the file and indexing it to Date as it is needed when I define the logic to put data in newly created column Forcast according to the date
+df = pd.read_csv(r'reliance_max.csv', header=0, index_col='Date', parse_dates=True) #reading the file and indexing it to Date as it is needed when I define the logic to put data in newly created column Forcast according to the date
 
 
 df.drop(['Close'], axis=1) # drop Close column
