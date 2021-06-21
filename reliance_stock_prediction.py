@@ -32,8 +32,8 @@ from sklearn.linear_model import LinearRegression
 
 X = np.array(df.drop(['label'], axis=1)) # X represent features. Here label column is not taken because it is not a feature. 
 X = preprocessing.scale(X) # scaling X
-X = X[:-forcast_out] # all values except last forcast_out number of values
 X_lately = X[-forcast_out:] # last forcast_out number of values
+X = X[:-forcast_out] # all values except last forcast_out number of values
 df.dropna(inplace=True) # drop NaN values
 y = np.array(df['label']) # y represent label. label column is label 
 
